@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public Camera cam1;
     public Camera cam2;
     public string inputID;
+    public KeyCode switchKey;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed) ;
         //rotate the vehicle 
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime );
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(switchKey))
         {
             cam1.enabled = !cam1.enabled;
             cam2.enabled = !cam2.enabled;
