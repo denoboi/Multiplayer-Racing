@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     public Camera cam1;
     public Camera cam2;
+    public string inputID;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal" + inputID);
+        verticalInput = Input.GetAxis("Vertical" + inputID);
 
         
 
