@@ -51,6 +51,7 @@ public class ObjectSpawn : MonoBehaviour
             Vector3 explosionPos = collision.gameObject.transform.position;
             rb.AddExplosionForce(power, explosionPos, radius, 3.0F);
             Debug.Log("exploded");
+            Destroy(gameObject);
 
         }
     }
